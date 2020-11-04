@@ -5,8 +5,8 @@ const Course = ({ course }) => {
   return (
     <Card>
       <CardBody>
-        <CardSubtitle className="font-weight-bold">{course.title}</CardSubtitle>
-        <CardText>{course.description}</CardText>
+        <CardSubtitle className="font-weight-bold">{course.courseTitle}</CardSubtitle>
+        <CardText>{course.courseDescripton}</CardText>
         <Container>
             <Button color="danger">Delete</Button>
             <Button color="warning ml-3">Update</Button>
