@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Course from './Course';
 
 const AllCourses = () => {
+
+    const [courses, setCourses] = useState([
+        { title:"Java Course" , description:"this is demo course"},
+        { title:"Django Course" , description:"this is demo course"},
+        { title:"ReactJs Courses" , description:"this is demo course"},
+        { title:"Angular" , description:"this is demo course"},
+    ] );
     return (
         <div>
-             <h1>LearnCode With Farid2</h1>
+             <h1>All Courses</h1>
 
-             <p>This is coding for learning java and NodeJs</p>
+             <p> List of Courses as followes</p>
+
+             {
+               courses.length>0 ? courses.map((item) => <Course course={item} />)  :"No Courses"
+             }
         </div>
     )
 }
