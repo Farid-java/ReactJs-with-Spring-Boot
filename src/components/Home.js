@@ -2,10 +2,10 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <div>
+        <div >
             <h1>LearnCode With Farid</h1>
 
-            <h2>This is coding for learning java and NodeJs</h2>
+            <p>This is coding for learning java and NodeJs</p>
         </div>
     )
 }
