@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Course from './Course';
 
 const AllCourses = () => {
-
+    useEffect(() => {
+        document.title="All Course"
+        
+    }, [])
+ 
     const [courses, setCourses] = useState([
         { title:"Java Course" , description:"this is demo course"},
         { title:"Django Course" , description:"this is demo course"},

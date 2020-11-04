@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Home = () => {
+    useEffect(() => {
+       document.title="Home Page"
+         
+    }, [])
     return (
         <div >
             <h1>LearnCode With Farid</h1>

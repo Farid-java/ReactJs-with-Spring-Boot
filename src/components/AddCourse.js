@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button, Container, Form, FormGroup, Input } from 'reactstrap'
 
 const AddCourse = () => {
+
+     useEffect(() => {
+        document.title="AddCourse"
+     }, [])
     return (
         <div>
             <h1 className="text-centre my-3">Fill Course Details</h1>
