@@ -24,6 +24,15 @@ const AllCourses = () => {
         useEffect(() => {
            getAllCoursesFromServer();
         }, [])
+
+        
+        
+        const deleteCourseList= (id) => {
+            setCourses(courses.filter((c)=>c.id!==id));
+        }
+        
+       
+        
  
     const [courses, setCourses] = useState([] );
     return (
@@ -33,7 +42,7 @@ const AllCourses = () => {
              <p> List of Courses as followes</p>
 
              {
-               courses.length>0 ? courses.map((item) => <Course key={item.id} course={item} />)  :"No Courses"
+               courses.length>0 ? courses.map((item) => <Course key={item.id} course={item}  deletedu={deleteCourseList}  />)  :"No Courses"
              }
         </div>
     )

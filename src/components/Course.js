@@ -3,14 +3,14 @@ import axios from 'axios';
 import { Button, Card, CardBody, CardSubtitle, CardText, Container } from "reactstrap";
 import base_url from "./bootapi";
 
-const Course = ({ course }) => {
+const Course = ({ course, deletedu}) => {
 
+  // use delete object from database by using WebService
 const deleteCourse = (id) => { 
- 
   axios.delete(`${base_url}/course/${id}`).then(
     (response)=>{
       console.log("data delete") 
-     
+      deletedu(id);
     },
     (error)=>{console.log("not deleted")}
 );  
