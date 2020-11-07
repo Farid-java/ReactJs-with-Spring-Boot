@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import base_url from './bootapi';
 import Course from './Course';
 
@@ -9,11 +9,12 @@ const AllCourses = () => {
         
     }, [])
 
-    //function to call url from bootapi
+    //function to call url from boot Rest
         const getAllCoursesFromServer=()=>{
         axios.get(`${base_url}/getAllCourse`).then(
             (response)=>{console.log(response) 
             setCourses(response.data);
+         
             },
             (error)=>{console.log(error)}
         );  
@@ -32,7 +33,7 @@ const AllCourses = () => {
              <p> List of Courses as followes</p>
 
              {
-               courses.length>0 ? courses.map((item) => <Course key={item.courseId} course={item} />)  :"No Courses"
+               courses.length>0 ? courses.map((item) => <Course key={item.id} course={item} />)  :"No Courses"
              }
         </div>
     )
